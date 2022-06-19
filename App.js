@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import {  Image,Pressable,SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React, { useState } from "react";
+import {  Image,Pressable,SafeAreaView, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 
 
 export const Button =({title})=>{
@@ -15,77 +15,69 @@ export const Button =({title})=>{
 }
 
 export default function App() {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   return (
-   <SafeAreaView>
-    <ScrollView>
-    <View style={{width:150,height:50,padding:15, margin:10,backgroundColor:"#6047EC",marginLeft:115,borderRadius:10}}>
-     <Text style={{textAlign:'center',color:'#fff'}}>Hello World s</Text>
-     </View>
-     <View style={{marginLeft:170,marginTop:30 }}>
-     <Image style={{height:50,width:50}}
-      source={require('./assets/favicon.png')}
-      resizeMode="contain" />
-     </View>
-     <View
-      style={{
-        width:150,
-        height:50,
-        padding:15,
-        margin:20, 
-        backgroundColor:"#1EC6DC",
-        marginLeft:115,
-        borderRadius:10}}>
-     <Text style={{textAlign:'center',color:'black'}}>Hello Forest</Text>
-     </View>
+   <SafeAreaView style={{flex:1}}>
+ 
+    <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+      <View style={styles.view1} >
+        <Pressable
+        onPress={()=>{
+          alert("Mango")
+        }}>
+        <Image style={{width:110,height:110}}
+         source={{uri:"https://www.collinsdictionary.com/images/full/apple_158989157.jpg"}} />
+        </Pressable>
+       
+      </View>
+      <View style={styles.view2} >
+      <Image style={{width:110,height:110}}
+       
+         source={{uri:"https://www.pharmamirror.com/wp-content/uploads/2013/06/Banna-as-Hepatitis-Oral-Vaccine.jpg"}} />
+      </View>
+      <View style={styles.view3} >
+      <Image style={{width:110,height:110}}
+         source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQK-hpm47mZPLjOqRC38t-sa3Kei6ajF83w&usqp=CAU"}} /> 
+      </View>
+    </View>
+    <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+      <View style={styles.view1} >
+        <Image style={{width:110,height:110}}
+         source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Adom-IW7rB2P0sY85matQhT1JDRXX0pmWlj6w-zEjWMowpJgHvfX6ZX_PSsooid0Tsw&usqp=CAU"}}
+          />
+      </View>
+      <View style={styles.view2} >
+      <Image style={{width:110,height:110}}
+       
+         source={{uri:"https://img.pixers.pics/pho_wat(s3:700/FO/42/34/31/36/700_FO42343136_28a7a150d92d87fe3f76170a48ff95de.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/plush-blankets-mango-fruit.jpg.jpg"}} />
+      </View>
+      <View style={styles.view3} >
+      <Image style={{width:110,height:110}}
+         source={{uri:"https://image.shutterstock.com/image-photo/red-grapes-bunch-leaf-isolated-260nw-243713296.jpg"}} /> 
+      </View>
+    </View>
+
     
-     <View style={{marginLeft:120,marginTop:30 }}>
-     <Image style={{height:150,width:150}}
-      source={{uri:"https://play-lh.googleusercontent.com/WRxEKrZo1bIJhgXZLy7u_uDiwjczoc-NJwntCqaFQpAhmZ8KdXtvCYqHpQGk-KYlUw"}}
-      resizeMode="cover" />
-     </View>
-     <View style={{marginLeft:120,marginTop:30 }}>
-     <Image style={{height:150,width:150}}
-      source={{uri:"https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb"}}
-      resizeMode="cover" />
-     </View>
-     <View style={{marginLeft:120,marginTop:30 }}>
-      <Image style={{height:150,width:150}}
-       source={{uri:"https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg"}}/>
-     </View>
-
-     
-
-     <Pressable onPress={()=>{
-      alert("Press")
-     }
-     }>
-      <View style={{margin:20}}>
-     <Text style={{textAlign:'center',color:'black',backgroundColor:'#BD76BF',padding:20}}>Hello Forest</Text>
-     </View>
-     </Pressable>
-
-     <TouchableOpacity
-        style={styles.button}
-       onPress={()=>{
-        alert('Hello world')
-       }}
-      >
-        <Text style={{ color:"#fff"}}>Press Here</Text>
-      </TouchableOpacity>
-
-      <Button title="Click more" />
-      <Button title="Click Korlam" />
-    </ScrollView>
+    
    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  button: {
-    alignItems: "center",
-    backgroundColor: "#4630EB",
-    padding: 20,
-    margin: 20,
+view1:{
+   width:100,
+   height:100,
+   
+  },
+  view2:{
+    width:100,
+    height:100,
+    margin:20
+  },
+  view3:{
+    width:100,
+    height:100,
    
   }
 });
