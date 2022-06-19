@@ -14,6 +14,10 @@ export default function App() {
      <View style={{marginLeft:170,marginTop:30 }}>
      <Image style={{height:50,width:50}} source={require('./assets/favicon.png')} />
      </View>
+     <View style={{marginLeft:120,marginTop:30 }}>
+     <Image style={{height:150,width:150}}
+      source={{uri:"https://play-lh.googleusercontent.com/WRxEKrZo1bIJhgXZLy7u_uDiwjczoc-NJwntCqaFQpAhmZ8KdXtvCYqHpQGk-KYlUw"}} />
+     </View>
    </SafeAreaView>
   );
 }
