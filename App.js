@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image,SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button, Image,Pressable,SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 
 export default function App() {
@@ -7,7 +7,7 @@ export default function App() {
    <SafeAreaView>
     <ScrollView>
     <View style={{width:150,height:50,padding:15, margin:10,backgroundColor:"#6047EC",marginLeft:115,borderRadius:10}}>
-     <Text style={{textAlign:'center',color:'#fff'}}>Hello World</Text>
+     <Text style={{textAlign:'center',color:'#fff'}}>Hello World s</Text>
      </View>
      <View style={{marginLeft:170,marginTop:30 }}>
      <Image style={{height:50,width:50}}
@@ -42,14 +42,40 @@ export default function App() {
      </View>
 
      <View>
-     <Button
+     <Button 
   title="Learn More"
   color="black"/>
      </View>
+
+     <Pressable onPress={()=>{
+      alert("Press")
+     }
+     }>
+      <View style={{margin:20}}>
+     <Text style={{textAlign:'center',color:'black',backgroundColor:'#BD76BF',padding:20}}>Hello Forest</Text>
+     </View>
+     </Pressable>
+
+     <TouchableOpacity
+        style={styles.button}
+       onPress={()=>{
+        alert('Hello world')
+       }}
+      >
+        <Text style={{ color:"#fff"}}>Press Here</Text>
+      </TouchableOpacity>
     </ScrollView>
    </SafeAreaView>
   );
 }
 
-
+const styles = StyleSheet.create({
+  button: {
+    alignItems: "center",
+    backgroundColor: "#4630EB",
+    padding: 20,
+    margin: 20,
+   
+  }
+});
 
