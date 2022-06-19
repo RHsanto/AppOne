@@ -1,6 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image,Pressable,SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {  Image,Pressable,SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+
+export const Button =({title})=>{
+  return(
+    <Pressable
+    style={{backgroundColor:"#2CACDD",padding:20,margin:20,borderRadius:50}}
+    onPress={()=>{
+      alert("Sabbas Munna")
+    }}>
+      <Text style={{textAlign:'center',color:'white'}}>{title}</Text>
+    </Pressable>
+  )
+}
 
 export default function App() {
   return (
@@ -41,11 +53,7 @@ export default function App() {
        source={{uri:"https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg"}}/>
      </View>
 
-     <View>
-     <Button 
-  title="Learn More"
-  color="black"/>
-     </View>
+     
 
      <Pressable onPress={()=>{
       alert("Press")
@@ -64,6 +72,9 @@ export default function App() {
       >
         <Text style={{ color:"#fff"}}>Press Here</Text>
       </TouchableOpacity>
+
+      <Button title="Click more" />
+      <Button title="Click Korlam" />
     </ScrollView>
    </SafeAreaView>
   );
