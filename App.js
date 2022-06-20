@@ -63,10 +63,19 @@ export default function App() {
         <Text style={{padding:20,lineHeight:20}}>Join RHsanto with your favorite social media account</Text>
       
       <View style={styles.allView}>
-        <View style={styles.view1}></View>
-        <View style={styles.view2}><Text>5gggggggg</Text></View>
-        <View style={styles.view3}><Text>5eeeeee</Text></View>
-        <View style={styles.view4}><Text>5wwwwwwwwwww</Text></View>
+        <View style={styles.view1}><Image 
+        style={{width:50,height:50}} 
+        source={{uri:'https://img.utdstc.com/icon/fe0/ab6/fe0ab67fa0de2b2681602db5708a076f50dd21106e0c2d38b9661875a37e235e:200'}} /></View>
+        <View style={styles.view2}><Image 
+        style={{width:40,height:40,margin:7}} 
+        source={{uri:'https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg'}} /></View>
+        <View style={styles.view3}><Image 
+        style={{width:50,height:50,marginLeft:4}} 
+        source={{uri:'https://www.theglades.co.uk/wp-content/uploads/2020/02/media.idownloadblog.com-23104664601427570.png'}} /></View>
+        <View style={styles.view4}><Image 
+        style={{width:50,height:50,marginLeft:5}} 
+        source={{uri:'https://help.twitter.com/content/dam/help-twitter/brand/logo.png'}} /></View>
+     
       </View>
 
       </View>
@@ -113,31 +122,31 @@ allView:{
 },
 view1:{
   flex:1,
-  backgroundColor:'red',
   borderWidth: 1,
-  borderRadius:5,
-  margin:5
+  borderRadius:10,
+  margin:5,
+  padding:5
 },
 view2:{
   flex:1,
-  backgroundColor:'yellow',
   borderWidth: 1,
-  borderRadius:5,
-  margin:5
+  borderRadius:10,
+  margin:5,
+  padding:5
 },
 view3:{
   flex:1,
-  backgroundColor:'green',
   borderWidth: 1,
-  borderRadius:5,
-  margin:5
+  borderRadius:10,
+  margin:5,
+  padding:5
 },
 view4:{
   flex:1,
-  backgroundColor:'blue',
   borderWidth: 1,
-  borderRadius:5,
-  margin:5
+  borderRadius:10,
+  margin:5,
+  padding:5
 }
 });
 
