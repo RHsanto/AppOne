@@ -60,12 +60,12 @@ export default function App() {
     {/* social media section */}
       <View>
         <Text style={{textAlign:'center',padding:10,color:'#989EB3'}}>- - - - - - - - - OR - - - - - - - - - -</Text>
-        <Text style={{padding:20,lineHeight:20}}>Join RHsanto with your favorite social media account</Text>
+        <Text style={{padding:20,lineHeight:20}}>Join RHsanto with your favorite social media account:</Text>
       
       <View style={styles.allView}>
         <View style={styles.view1}><Image 
-        style={{width:50,height:50}} 
-        source={{uri:'https://img.utdstc.com/icon/fe0/ab6/fe0ab67fa0de2b2681602db5708a076f50dd21106e0c2d38b9661875a37e235e:200'}} /></View>
+        style={{width:50,height:50,marginLeft:4}} 
+        source={{uri:'https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png'}} /></View>
         <View style={styles.view2}><Image 
         style={{width:40,height:40,margin:7}} 
         source={{uri:'https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg'}} /></View>
