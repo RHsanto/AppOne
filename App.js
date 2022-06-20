@@ -1,84 +1,143 @@
-import React, { useState } from "react";
-import {  Image,Pressable,SafeAreaView, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 
+import { useState } from 'react';
+import { Image, Pressable, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
-export const Button =({title})=>{
-  return(
-    <Pressable
-    style={{backgroundColor:"#2CACDD",padding:20,margin:20,borderRadius:50}}
-    onPress={()=>{
-      alert("Sabbas Munna")
-    }}>
-      <Text style={{textAlign:'center',color:'white'}}>{title}</Text>
-    </Pressable>
-  )
-}
+// export const Button =({title})=>{
+//   return(
+//     <Pressable
+//     style={{backgroundColor:"#2CACDD",padding:20,margin:20,borderRadius:50}}
+//     onPress={()=>{
+//       alert("Sabbas Munna")
+//     }}>
+//       <Text style={{textAlign:'center',color:'white'}}>{title}</Text>
+//     </Pressable>
+//   )
+// }
 
 export default function App() {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  const [text, onChangeText] = useState("");
+  const [number, onChangeNumber] = useState(null);
+
   return (
-   <SafeAreaView style={{flex:1}}>
- 
-    <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
-      <View style={styles.view1} >
-        <Pressable
-        onPress={()=>{
-          alert("Mango")
-        }}>
-        <Image style={{width:110,height:110}}
-         source={{uri:"https://www.collinsdictionary.com/images/full/apple_158989157.jpg"}} />
-        </Pressable>
-       
-      </View>
-      <View style={styles.view2} >
-      <Image style={{width:110,height:110}}
-       
-         source={{uri:"https://www.pharmamirror.com/wp-content/uploads/2013/06/Banna-as-Hepatitis-Oral-Vaccine.jpg"}} />
-      </View>
-      <View style={styles.view3} >
-      <Image style={{width:110,height:110}}
-         source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQK-hpm47mZPLjOqRC38t-sa3Kei6ajF83w&usqp=CAU"}} /> 
-      </View>
-    </View>
-    <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
-      <View style={styles.view1} >
-        <Image style={{width:110,height:110}}
-         source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Adom-IW7rB2P0sY85matQhT1JDRXX0pmWlj6w-zEjWMowpJgHvfX6ZX_PSsooid0Tsw&usqp=CAU"}}
-          />
-      </View>
-      <View style={styles.view2} >
-      <Image style={{width:110,height:110}}
-       
-         source={{uri:"https://img.pixers.pics/pho_wat(s3:700/FO/42/34/31/36/700_FO42343136_28a7a150d92d87fe3f76170a48ff95de.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/plush-blankets-mango-fruit.jpg.jpg"}} />
-      </View>
-      <View style={styles.view3} >
-      <Image style={{width:110,height:110}}
-         source={{uri:"https://image.shutterstock.com/image-photo/red-grapes-bunch-leaf-isolated-260nw-243713296.jpg"}} /> 
-      </View>
+   <SafeAreaView >
+    <ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.title}>Welcome back</Text>
+
+  {/* here use text input */}
+       <View style={{marginTop:20}}>
+      <Text style={styles.label}>Email</Text>
+       <TextInput
+        style={styles.input}
+        onChangeText={onChangeText}
+        value={text}
+        placeholder="Email"
+      />
+
+    <Text style={styles.label}>Password</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="Password"
+        keyboardType="numeric"
+      />
+      <Text style={{textAlign:"right", padding:10}}>Forgot Password?</Text>
+       </View>
+
+  {/* here log in button */}
+    <View>
+     <Pressable 
+     onPress={()=>{
+      alert("it's not working")
+     }}>
+      <Text style={styles.logInBtn}>
+        Log In
+      </Text>
+     </Pressable>
     </View>
 
-    
-    
+    {/* social media section */}
+      <View>
+        <Text style={{textAlign:'center',padding:10,color:'#989EB3'}}>- - - - - - - - - OR - - - - - - - - - -</Text>
+        <Text style={{padding:20,lineHeight:20}}>Join RHsanto with your favorite social media account</Text>
+      
+      <View style={styles.allView}>
+        <View style={styles.view1}></View>
+        <View style={styles.view2}><Text>5gggggggg</Text></View>
+        <View style={styles.view3}><Text>5eeeeee</Text></View>
+        <View style={styles.view4}><Text>5wwwwwwwwwww</Text></View>
+      </View>
+
+      </View>
+
+
+      </View>
+    </ScrollView>
    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  container:{
+  flex:1,
+  padding:20
+  },
+ title:{
+  fontSize:28,
+  fontWeight:'bold',
+  padding:10
+},
+input: {
+  margin: 12,
+  borderWidth: 1,
+  padding: 20,
+ borderRadius:5 
+},
+label:{
+marginLeft:15
+},
+logInBtn:{
+  borderWidth: 1,
+  margin: 12,
+  padding: 20,
+  color:'#fff',
+  textAlign:'center',
+  backgroundColor:'black'
+
+},
+allView:{
+  flexDirection:'row',
+  margin:10
+ 
+},
 view1:{
-   width:100,
-   height:100,
-   
-  },
-  view2:{
-    width:100,
-    height:100,
-    margin:20
-  },
-  view3:{
-    width:100,
-    height:100,
-   alignSelf:'flex-end'
-  }
+  flex:1,
+  backgroundColor:'red',
+  borderWidth: 1,
+  borderRadius:5,
+  margin:5
+},
+view2:{
+  flex:1,
+  backgroundColor:'yellow',
+  borderWidth: 1,
+  borderRadius:5,
+  margin:5
+},
+view3:{
+  flex:1,
+  backgroundColor:'green',
+  borderWidth: 1,
+  borderRadius:5,
+  margin:5
+},
+view4:{
+  flex:1,
+  backgroundColor:'blue',
+  borderWidth: 1,
+  borderRadius:5,
+  margin:5
+}
 });
 
