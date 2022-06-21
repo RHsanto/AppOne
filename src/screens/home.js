@@ -7,10 +7,10 @@ import Text from '../components/Text/text';
 import { typography } from '../theme/typography';
 import { spacing } from '../theme/spacing';
 import { colors } from '../theme/colors';
+import { AntDesign } from '@expo/vector-icons';
 
 
-
-export default function Home() {
+export default function Home({navigation}) {
   const [text, onChangeText] = useState("");
   const [number, onChangeNumber] = useState(null);
   let [fontsLoaded] = useFonts({
@@ -27,6 +27,7 @@ export default function Home() {
      
       <View style={styles.container}>
         <Text preset='h1'>Welcome back</Text>
+        <AntDesign name="swap" size={24} color="black" />
   {/* here use text input */}
        <View style={{marginTop:20}}>
       <Text preset='h4' style={styles.label}>Email</Text>
@@ -52,7 +53,7 @@ export default function Home() {
     <View>
      <Pressable 
      onPress={()=>{
-      alert("it's not working")
+      navigation.navigate('LogIn')
      }}>
       <Text style={styles.logInBtn}>
         Log In
