@@ -1,9 +1,12 @@
 
 import { useState } from 'react';
-import { Image, Pressable, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, Pressable, SafeAreaView, 
+  ScrollView, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import {colors} from './src/theme/colors';
 import {typography} from './src/theme/typography';
+import { spacing } from './src/theme/spacing';
+import Text from './src/components/Text/text';
 
 
 export default function App() {
@@ -22,7 +25,7 @@ export default function App() {
    <SafeAreaView >
     <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.title}>Welcome back</Text>
+        <Text >Welcome back</Text>
   {/* here use text input */}
        <View style={{marginTop:20}}>
       <Text style={styles.label}>Email</Text>
@@ -96,7 +99,8 @@ const styles = StyleSheet.create({
   fontWeight:'bold',
   padding:10,
   fontFamily: typography.primary,
-  color:colors.purple
+  color:colors.purple,
+  marginTop:spacing[10]
 },
 input: {
   margin: 12,
