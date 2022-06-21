@@ -23,8 +23,7 @@ export default function Home({navigation}) {
   }
   return (
    <SafeAreaView >
-    <ScrollView>
-     
+    <ScrollView>  
       <View style={styles.container}>
         <Text preset='h1'>Welcome back</Text>
         <AntDesign name="swap" size={24} color="black" />

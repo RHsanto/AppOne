@@ -12,7 +12,7 @@ return (
       onPress={()=>{
         navigation.goBack();
       }}>
-        <AntDesign name="banckward" size={24} color="black" />
+      <AntDesign name="banckward" size={24} color="black" />
       </Pressable>
     )}
    
