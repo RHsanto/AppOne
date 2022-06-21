@@ -1,17 +1,26 @@
 
 import { useState } from 'react';
 import { Image, Pressable, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from 'react-native';
-
+import { useFonts } from 'expo-font';
 
 export default function App() {
   const [text, onChangeText] = useState("");
   const [number, onChangeNumber] = useState(null);
-  
+  let [fontsLoaded] = useFonts({
+   
+    'Poppins-Italic': require('./assets/font/Poppins-Black.ttf'),
+    'Roboto-Bold': require('./assets/font/Roboto-Bold.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return <Text>loading ....</Text>;
+  }
   return (
    <SafeAreaView >
     <ScrollView>
       <View style={styles.container}>
         <Text style={styles.title}>Welcome back</Text>
+        <Text style={{fontFamily:'Poppins-Italic',fontSize:25}}>Welcome back</Text>
   {/* here use text input */}
        <View style={{marginTop:20}}>
       <Text style={styles.label}>Email</Text>
@@ -83,7 +92,8 @@ const styles = StyleSheet.create({
  title:{
   fontSize:28,
   fontWeight:'bold',
-  padding:10
+  padding:10,
+  fontFamily:'Roboto-Bold'
 },
 input: {
   margin: 12,
