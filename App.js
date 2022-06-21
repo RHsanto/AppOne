@@ -1,36 +1,17 @@
 
 import { useState } from 'react';
 import { Image, Pressable, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 
-// export const Button =({title})=>{
-//   return(
-//     <Pressable
-//     style={{backgroundColor:"#2CACDD",padding:20,margin:20,borderRadius:50}}
-//     onPress={()=>{
-//       alert("Sabbas Munna")
-//     }}>
-//       <Text style={{textAlign:'center',color:'white'}}>{title}</Text>
-//     </Pressable>
-//   )
-// }
 
 export default function App() {
   const [text, onChangeText] = useState("");
   const [number, onChangeNumber] = useState(null);
-  const [fontsLoaded] = useFonts({
-    Inter_900Black,
-  });
-
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
+  
   return (
    <SafeAreaView >
     <ScrollView>
       <View style={styles.container}>
         <Text style={styles.title}>Welcome back</Text>
-        <Text style={{ fontFamily: 'Inter_900Black', fontSize: 40 }}>Inter Black</Text>
   {/* here use text input */}
        <View style={{marginTop:20}}>
       <Text style={styles.label}>Email</Text>
