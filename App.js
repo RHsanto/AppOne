@@ -25,10 +25,10 @@ export default function App() {
    <SafeAreaView >
     <ScrollView>
       <View style={styles.container}>
-        <Text >Welcome back</Text>
+        <Text preset='h1'>Welcome back</Text>
   {/* here use text input */}
        <View style={{marginTop:20}}>
-      <Text style={styles.label}>Email</Text>
+      <Text preset='h4' style={styles.label}>Email</Text>
        <TextInput
         style={styles.input}
         onChangeText={onChangeText}
@@ -36,7 +36,7 @@ export default function App() {
         placeholder="Email"
       />
 
-    <Text style={styles.label}>Password</Text>
+    <Text preset='h4' style={styles.label}>Password</Text>
       <TextInput
         style={styles.input}
         onChangeText={onChangeNumber}
@@ -44,7 +44,7 @@ export default function App() {
         placeholder="Password"
         keyboardType="numeric"
       />
-      <Text style={{textAlign:"right", padding:10}}>Forgot Password?</Text>
+      <Text preset='h4' style={{textAlign:"right", padding:10}}>Forgot Password?</Text>
        </View>
 
   {/* here log in button */}

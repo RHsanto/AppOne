@@ -10,12 +10,12 @@ const BASE ={
 const BASE_BOLD ={
 fontFamily:typography.primaryBold,
 fontSize:16,
-color:colors.white
+
 }
 
 const BOLD ={
   fontFamily:typography.primaryBold,
-  color:colors.white
+  color:colors.purple
 }
 
 
@@ -36,7 +36,7 @@ export const presets={
   },
   h4:{
     ...BASE_BOLD,
-    fontSize:14,
+    fontSize:17,
   },
  small:{
   ...BASE,
