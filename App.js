@@ -2,14 +2,17 @@
 import { useState } from 'react';
 import { Image, Pressable, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useFonts } from 'expo-font';
+import {colors} from './src/theme/colors';
+import {typography} from './src/theme/typography';
+
 
 export default function App() {
   const [text, onChangeText] = useState("");
   const [number, onChangeNumber] = useState(null);
   let [fontsLoaded] = useFonts({
-   
-    'Poppins-Italic': require('./assets/font/Poppins-Black.ttf'),
+    'Poppins-Black': require('./assets/font/Poppins-Black.ttf'),
     'Roboto-Bold': require('./assets/font/Roboto-Bold.ttf'),
+    'Poppins-ThinItalic': require('./assets/font/Poppins-ThinItalic.ttf'),
   });
 
   if (!fontsLoaded) {
@@ -20,7 +23,6 @@ export default function App() {
     <ScrollView>
       <View style={styles.container}>
         <Text style={styles.title}>Welcome back</Text>
-        <Text style={{fontFamily:'Poppins-Italic',fontSize:25}}>Welcome back</Text>
   {/* here use text input */}
        <View style={{marginTop:20}}>
       <Text style={styles.label}>Email</Text>
@@ -93,7 +95,8 @@ const styles = StyleSheet.create({
   fontSize:28,
   fontWeight:'bold',
   padding:10,
-  fontFamily:'Roboto-Bold'
+  fontFamily: typography.primary,
+  color:colors.purple
 },
 input: {
   margin: 12,
@@ -110,7 +113,7 @@ logInBtn:{
   padding: 20,
   color:'#fff',
   textAlign:'center',
-  backgroundColor:'black'
+  backgroundColor:colors.black
 
 },
 allView:{
