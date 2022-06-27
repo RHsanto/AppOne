@@ -26,7 +26,7 @@ export default function Home({navigation}) {
     <ScrollView>  
       <View style={styles.container}>
         <Text preset='h1'>Welcome back</Text>
-        <AntDesign name="swap" size={24} color="black" />
+       
   {/* here use text input */}
        <View style={{marginTop:20}}>
       <Text preset='h4' style={styles.label}>Email</Text>
